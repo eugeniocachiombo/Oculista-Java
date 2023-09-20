@@ -1,0 +1,22 @@
+public class Conexao {
+    
+ public Connection getConexao(){
+     
+     try {
+         
+         Connection conn = DriverManager.getConnection(
+         "jdbc:mysql://localhost:3306/oculista?serverTimezone=UTC",
+         "root",
+         ""
+         );
+         return conn;
+     } catch (Exception e) {
+         System.out.println("Erro na conexao \n"+ e.getMessage());
+         
+         return null;
+     }
+  
+     
+     
+ }  
+    
